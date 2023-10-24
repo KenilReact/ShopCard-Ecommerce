@@ -16,11 +16,11 @@ import help_center from "assets-shopcart/asset85.svg";
 const Footer = () => {
   return (
     <>
-      <hr/>
+      <hr />
       <div className="footerPage my-10">
         <div className="container mx-auto">
-          <div className="grid grid-cols-5">
-            <div className="shopcardDetails mx-5">
+          <div className="grid lg:grid-cols-6 gap-10 xs:grid-cols-3 xs:gap-3">
+            <div className="shopcardDetails mx-5 col-span-2">
               <div className="logo">
                 <Image src={logo} alt="logo" />
               </div>
@@ -33,31 +33,29 @@ const Footer = () => {
               <div className="acceptedPayment mt-10">
                 <p className="text-xl font-semibold">Accepted Payments</p>
               </div>
-              <div className="grid grid-cols-4 mt-5">
-                <div className="paymentName border border-gray-300 rounded-lg flex items-center justify-center py-2 mx-1">
+              <div className="grid grid-cols-4 mt-5 lg:me-14 xl:me-32 xs:me-3">
+                <div className="paymentName border border-gray-300 rounded-lg flex items-center justify-center py-2 m-1">
                   <Image src={payment_1} alt="image" />
                 </div>
-                <div className="paymentName border border-gray-300 rounded-lg flex items-center justify-center py-2 mx-1">
+                <div className="paymentName border border-gray-300 rounded-lg flex items-center justify-center py-2 m-1">
                   <Image src={payment_2} alt="image" />
                 </div>
-                <div className="paymentName border border-gray-300 rounded-lg flex items-center justify-center py-2 mx-1">
+                <div className="paymentName border border-gray-300 rounded-lg flex items-center justify-center py-2 m-1">
                   <Image src={payment_3} alt="image" />
                 </div>
-                <div className="paymentName border border-gray-300 rounded-lg flex items-center justify-center py-2 mx-1">
+                <div className="paymentName border border-gray-300 rounded-lg flex items-center justify-center py-2 m-1">
                   <Image src={payment_4} alt="image" />
                 </div>
-              </div>
-              <div className="grid grid-cols-4 mt-5">
-                <div className="paymentName border border-gray-300 rounded-lg flex items-center justify-center py-2 mx-1">
+                <div className="paymentName border border-gray-300 rounded-lg flex items-center justify-center py-2 m-1">
                   <Image src={payment_5} alt="image" />
                 </div>
-                <div className="paymentName border border-gray-300 rounded-lg flex items-center justify-center py-2 mx-1">
+                <div className="paymentName border border-gray-300 rounded-lg flex items-center justify-center py-2 m-1">
                   <Image src={payment_6} alt="image" />
                 </div>
-                <div className="paymentName border border-gray-300 rounded-lg flex items-center justify-center py-2 mx-1">
+                <div className="paymentName border border-gray-300 rounded-lg flex items-center justify-center py-2 m-1">
                   <Image src={payment_7} alt="image" />
                 </div>
-                <div className="paymentName border border-gray-300 rounded-lg flex items-center justify-center py-2 mx-1">
+                <div className="paymentName border border-gray-300 rounded-lg flex items-center justify-center py-2 m-1">
                   <Image src={payment_8} alt="image" />
                 </div>
               </div>
@@ -68,7 +66,7 @@ const Footer = () => {
                 <p className="text-xl font-semibold">Department</p>
               </div>
               <div className="list mt-5">
-                <ul>
+                <ul className="cursor-pointer">
                   <li className="text-sm my-2 hover:text-red-400 hover:ps-3 duration-150">
                     Fashion
                   </li>
@@ -120,7 +118,7 @@ const Footer = () => {
                 <p className="text-xl font-semibold">About Us</p>
               </div>
               <div className="list mt-5">
-                <ul>
+                <ul className="cursor-pointer">
                   <li className="text-sm my-2 hover:text-red-400 hover:ps-3 duration-150">
                     About Shopcart
                   </li>
@@ -157,7 +155,7 @@ const Footer = () => {
                 <p className="text-xl font-semibold">Services</p>
               </div>
               <div className="list mt-5">
-                <ul>
+                <ul className="cursor-pointer">
                   <li className="text-sm my-2 hover:text-red-400 hover:ps-3 duration-150">
                     Gift Card
                   </li>
@@ -182,7 +180,7 @@ const Footer = () => {
                 <p className="text-xl font-semibold">Help</p>
               </div>
               <div className="list mt-5">
-                <ul>
+                <ul className="cursor-pointer">
                   <li className="text-sm my-2 hover:text-red-400 hover:ps-3 duration-150">
                     Shopcart Help
                   </li>
@@ -205,40 +203,47 @@ const Footer = () => {
               </div>
             </div>
           </div>
+
           <hr className="my-10" />
-          <div className="footerTeams">
-            <div className="footerMenu flex justify-around">
-              <div className="desk flex">
-                <div className="becomeSeller flex">
+          <div className="footerTeams xs:mx-2 sm:mx-5">
+            <div className="footerMenu flex justify-around xs:flex-col lg:flex-row">
+              <div className="desk flex justify-between">
+                <div className="becomeSeller flex items-center">
                   <Image src={become_seller} alt="image" />
-                  <p className="font-medium ms-2 hover:text-red-400">
+                  <p className="font-medium ms-2 hover:text-red-400 cursor-pointer">
                     Become Seller
                   </p>
                 </div>
-                <div className="becomeSeller flex ms-5">
+                <div className="becomeSeller flex ms-5 items-center">
                   <Image src={gift_card} alt="image" />
-                  <p className="font-medium ms-2 hover:text-red-400">
+                  <p className="font-medium ms-2 hover:text-red-400 cursor-pointer">
                     Gift Card
                   </p>
                 </div>
-                <div className="becomeSeller flex ms-5">
+                <div className="becomeSeller flex ms-5 items-center">
                   <Image src={help_center} alt="image" />
-                  <p className="font-medium ms-2 hover:text-red-400">
+                  <p className="font-medium ms-2 hover:text-red-400 cursor-pointer">
                     Help Center
                   </p>
                 </div>
               </div>
 
+              <div className="flex justify-around xs:my-3 gap-3 lg:gap-10">
                 <div className="teams">
-                  <p className="hover:text-red-400">Terms of Service</p>
+                  <p className="hover:text-red-400 cursor-pointer">
+                    Terms of Service
+                  </p>
                 </div>
                 <div className="privacy">
-                  <p className="hover:text-red-400">Privacy & Policy</p>
+                  <p className="hover:text-red-400 cursor-pointer">
+                    Privacy & Policy
+                  </p>
                 </div>
+              </div>
 
-                <div className="copyRight">
-                  <p>All Right reserved by Musemind | 2022</p>
-                </div>
+              <div className="copyRight flex items-center justify-center ">
+                <p>All Right reserved by Musemind | 2022</p>
+              </div>
             </div>
           </div>
         </div>
